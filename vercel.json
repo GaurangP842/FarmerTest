@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/ask/(.*)",
+        "dest": "http://34.132.178.131:8000/ask/$1"
+      }
+    ]
+  }
+  
