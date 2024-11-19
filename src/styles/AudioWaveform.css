@@ -1,0 +1,76 @@
+.waveform-wrapper {
+    width: 100%;
+    height: 20vh;
+    /* 20% of viewport height */
+    min-height: 120px;
+    max-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.waveform-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    /* Increased spacing between bars */
+    height: 100%;
+    width: 100%;
+    max-width: 600px;
+}
+
+.waveform-bar {
+    width: 3px;
+    /* Thinner bars */
+    min-height: 10%;
+    background-color: #D1D1D1;
+    border-radius: 4px;
+    transition: height 0.2s ease, background-color 0.2s ease;
+}
+
+.waveform-bar.active {
+    background-color: #57A0FF;
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .waveform-wrapper {
+        height: 15vh;
+        min-height: 100px;
+    }
+
+    .waveform-container {
+        gap: 8px;
+        max-width: 300px;
+    }
+
+    .waveform-bar {
+        width: 2px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .waveform-wrapper {
+        height: 18vh;
+    }
+
+    .waveform-container {
+        gap: 10px;
+        max-width: 400px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .waveform-wrapper {
+        max-height: 250px;
+    }
+
+    .waveform-container {
+        max-width: 800px;
+    }
+}
